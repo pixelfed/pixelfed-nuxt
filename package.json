@@ -1,0 +1,23 @@
+{
+  "name": "pixelfed-nuxt",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "nuxt": "^3.12.2",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10",
+    "sass": "^1.77.8"
+  }
+}
