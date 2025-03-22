@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.1.5",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@pinia/nuxt": "^0.7.0",
@@ -21,6 +22,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "@vue/babel-plugin-jsx": "^1.4.0",
     "cssnano": "^7.0.6",
     "postcss-class-rename": "^1.0.1",
     "postcss-prefix-selector": "^2.1.0"
