@@ -9,10 +9,31 @@ export default defineNuxtConfig({
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
-    // and more...
+  },
+  runtimeConfig: {
+    public: {
+      serverUrl: process.env.SERVER_URL || 'https://pixelfed.social',
+      clientId: process.env.CLIENT_ID || '',
+      clientSecret: process.env.CLIENT_SECRET || '',
+      redirectUri: process.env.REDIRECT_URI || 'http://localhost:3000/login'
+    }
   },
   pinia: {
+    autoImports: ['defineStore', 'storeToRefs'],
     storesDirs: ['./stores/**'],
+  },
+  build: {
+    babel: {
+      plugins: ['@vue/babel-plugin-jsx']
+    }
+  },
+  imports: {
+    dirs: ['stores']
+  },
+  vite: {
+    plugins: [
+      require('@vitejs/plugin-vue-jsx')()
+    ]
   },
   experimental: {
     viewTransition: true
